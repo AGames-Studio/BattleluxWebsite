@@ -3,20 +3,24 @@ html {
     padding: 0px;
     margin: 0%;
 }
+
 body{
     padding: 0%;
     margin: 0%;
     background-color: black;
 }
+
 h1 {
     font-family: 'Inter', sans-serif;
     font-weight: 800;
 }
+
 .nav{
     margin: 0%;
     padding: 15px;
     position: fixed;
 }
+
 .title-header-fill{
     margin: 0%;
     padding: 0%;
@@ -30,32 +34,62 @@ h1 {
     display: flex;
     flex-direction: column;
     color: white;
+    font-family: "Inter", sans-serif;
+    font-weight: 300px;
+    font-size: 22.5px;
 }
+
 
 /* Main Site On-load */
 @keyframes mainLogoAnim {
     0% {rotate: -90deg; opacity: 0%; scale: 50%;}
     50% {rotate: 0deg; opacity: 100%; scale: 100%;}
-    60% {opacity: 100%;}
-    75% {scale: 100%; opacity: 100%; transform: translateY(0px);}
+    55% {opacity: 100%;}
+    60% {scale: 100%; opacity: 100%; transform: translateY(0px);}
     100% {scale: 55%; opacity: 100%; transform: translateY(-100px);}
 }
+
 .mainLogo {
     opacity: 0%;
     animation-name: mainLogoAnim;
-    animation-duration: 4s;
+    animation-duration: 2.5s;
     animation-delay: 0.5s;
     animation-fill-mode: forwards;
+}
+
+.mainHeaderText::before {
+    content: "Introducing, Battlelux.";
+    transform: translateY(-110px);
+    opacity: 0%;
+    animation-name: mainHeaderTextFade;
+    animation-duration: 4s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes mainHeaderTextFade {
+    0% {opacity: 0%; content: "Introducing, Battlelux."}
+    25% {opacity: 100%; content: "Introducing, Battlelux."}
+    50% {opacity: 0; content: "Introducing, Battlelux."}
+    55% {content: "The Realistic Third Person Shooter"}
+    75% {opacity: 100%; content: "The Realistic Third Person Shooter"}
+    100% {opacity: 0%; content: "The Realistic Third Person Shooter"}
+}
+
+.mainHeaderText {
+    transform: translateY(-110px);
 }
 
 @keyframes mainNavAnim {
     0% {transform: translateY(-25%); opacity: 0%;}
     100% {transform: translateY(0%); opacity: 100%;}
 }
+
 .nav {
     transform: translateY(-100%);
     animation-name: mainNavAnim;
-    animation-duration: 4s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
 }
 
@@ -64,6 +98,7 @@ h1 {
     20% {}
     100% {opacity: 100%;}
 }
+
 .content {
     animation-name: mainFadeBackground;
     animation-duration: 2s;
