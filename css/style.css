@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');/* Start */
 html {
     padding: 0px;
     margin: 0%;
@@ -19,12 +20,13 @@ h1 {
     margin: 0%;
     padding: 15px;
     position: fixed;
+    width: 100%;
 }
 
 .title-header-fill{
     margin: 0%;
     padding: 0%;
-    background-image: url(../img/title_background.png);
+    background-image: url(../img/Background.png);
     background-color: black;
     background-size: 187vh;
     height: 100vh;
@@ -39,7 +41,29 @@ h1 {
     font-size: 22.5px;
 }
 
+.newsBar {
+    padding: 10px;
+    color: white;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+}
 
+.mainContent {
+    display: block;
+}
+
+.newBarContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.newsBarTextContent {
+    width: 500px;
+}
+
+/* Anims */
 /* Main Site On-load */
 @keyframes mainLogoAnim {
     0% {rotate: -90deg; opacity: 0%; scale: 50%;}
@@ -65,16 +89,13 @@ h1 {
     animation-duration: 4s;
     animation-delay: 3s;
     animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
 }
-
 @keyframes mainHeaderTextFade {
-    0% {opacity: 0%; content: "Introducing, Battlelux."}
-    25% {opacity: 100%; content: "Introducing, Battlelux."}
+    0% {opacity: 0%; content: "Introducing, Battlelux."; transform: translateY(-20px);}
+    25% {opacity: 100%; content: "Introducing, Battlelux."; transform: translateY(0px);}
     50% {opacity: 0; content: "Introducing, Battlelux."}
     55% {content: "The Realistic Third Person Shooter"}
-    75% {opacity: 100%; content: "The Realistic Third Person Shooter"}
-    100% {opacity: 0%; content: "The Realistic Third Person Shooter"}
+    100% {opacity: 100%; content: "The Realistic Third Person Shooter"}
 }
 
 .mainHeaderText {
@@ -105,4 +126,22 @@ h1 {
     animation-fill-mode: forwards;
 }
 
-/* Main Site after anims */
+/* Custom Scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(255, 255, 255);
+    border-radius: 5px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(150, 150, 150);
+    border-radius: 10px;
+  }
+
+/* idk */
