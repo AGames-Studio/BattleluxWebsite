@@ -1,9 +1,155 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');/* Start */
 html {
-    font-family: 'Inter', sans-serif;
+    padding: 0px;
+    margin: 0%;
+}
 
+body{
+    padding: 0%;
+    margin: 0%;
+    background-color: black;
+}
+
+h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+}
+
+.nav{
+    margin: 0%;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+}
+
+.title-header-fill{
+    margin: 0%;
+    padding: 0%;
+    background-image: url(../img/Background.png);
+    background-color: black;
+    background-size: 187vh;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-weight: 300px;
+    font-size: 22.5px;
+}
+
+.newsBar {
+    padding: 10px;
+    color: white;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+}
+
+.mainContent {
+    display: block;
+}
+
+.newBarContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.newsBarTextContent {
+    width: 500px;
+}
+
+footer {
+    font-family: "Inter", sans-serif;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-weight: 300;
+}
+
+/* Anims */
+/* Main Site On-load */
+@keyframes mainLogoAnim {
+    0% {rotate: -90deg; opacity: 0%; scale: 50%;}
+    50% {rotate: 0deg; opacity: 100%; scale: 100%;}
+    55% {opacity: 100%;}
+    60% {scale: 100%; opacity: 100%; transform: translateY(0px);}
+    100% {scale: 55%; opacity: 100%; transform: translateY(-100px);}
+}
+
+.mainLogo {
+    opacity: 0%;
+    animation-name: mainLogoAnim;
+    animation-duration: 2.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.mainHeaderText::before {
+    content: "Introducing, Battlelux.";
+    transform: translateY(-110px);
+    opacity: 0%;
+    animation-name: mainHeaderTextFade;
+    animation-duration: 4s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes mainHeaderTextFade {
+    0% {opacity: 0%; content: "Introducing, Battlelux."; transform: translateY(-20px);}
+    25% {opacity: 100%; content: "Introducing, Battlelux."; transform: translateY(0px);}
+    50% {opacity: 0; content: "Introducing, Battlelux."}
+    55% {content: "The Realistic Third Person Shooter"}
+    100% {opacity: 100%; content: "The Realistic Third Person Shooter"}
+}
+
+.mainHeaderText {
+    transform: translateY(-110px);
+}
+
+@keyframes mainNavAnim {
+    0% {transform: translateY(-25%); opacity: 0%;}
+    100% {transform: translateY(0%); opacity: 100%;}
 }
 
 .nav {
-
+    transform: translateY(-100%);
+    animation-name: mainNavAnim;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
+
+@keyframes mainFadeBackground {
+    0% {opacity: 0%;}
+    20% {}
+    100% {opacity: 100%;}
+}
+
+.content {
+    animation-name: mainFadeBackground;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+/* Custom Scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(255, 255, 255);
+    border-radius: 5px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(150, 150, 150);
+    border-radius: 10px;
+  }
+
+/* idk */
