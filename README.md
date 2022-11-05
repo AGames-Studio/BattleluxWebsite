@@ -1,2 +1,4 @@
-# BattleluxWebsite
-The official website for Battlelux
+# Battlelux Website
+The official webiste for Battlelux.
+
+<code>'dev'</code>
