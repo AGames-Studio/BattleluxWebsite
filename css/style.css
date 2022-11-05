@@ -63,6 +63,14 @@ h1 {
     width: 500px;
 }
 
+footer {
+    font-family: "Inter", sans-serif;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-weight: 300;
+}
+
 /* Anims */
 /* Main Site On-load */
 @keyframes mainLogoAnim {
@@ -129,7 +137,7 @@ h1 {
 /* Custom Scrollbar */
 /* width */
 ::-webkit-scrollbar {
-    width: 5px;
+    width: 7px;
   }
   
   /* Track */
