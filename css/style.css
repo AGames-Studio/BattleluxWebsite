@@ -6,6 +6,7 @@ html {
 body{
     padding: 0%;
     margin: 0%;
+    background-color: black;
 }
 h1 {
     font-family: 'Inter', sans-serif;
@@ -19,8 +20,7 @@ h1 {
 .title-header-fill{
     margin: 0%;
     padding: 0%;
-    height: 2vh;
-    background-image: url(../img/character_extreme_lighting.png);
+    background-image: url(../img/title_background.png);
     background-color: black;
     background-size: 187vh;
     height: 100vh;
@@ -31,3 +31,43 @@ h1 {
     flex-direction: column;
     color: white;
 }
+
+/* Main Site On-load */
+@keyframes mainLogoAnim {
+    0% {rotate: -90deg; opacity: 0%; scale: 50%;}
+    50% {rotate: 0deg; opacity: 100%; scale: 100%;}
+    60% {opacity: 100%;}
+    75% {scale: 100%; opacity: 100%; transform: translateY(0px);}
+    100% {scale: 55%; opacity: 100%; transform: translateY(-100px);}
+}
+.mainLogo {
+    opacity: 0%;
+    animation-name: mainLogoAnim;
+    animation-duration: 4s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes mainNavAnim {
+    0% {transform: translateY(-25%); opacity: 0%;}
+    100% {transform: translateY(0%); opacity: 100%;}
+}
+.nav {
+    transform: translateY(-100%);
+    animation-name: mainNavAnim;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes mainFadeBackground {
+    0% {opacity: 0%;}
+    20% {}
+    100% {opacity: 100%;}
+}
+.content {
+    animation-name: mainFadeBackground;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+/* Main Site after anims */
