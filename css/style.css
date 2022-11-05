@@ -1,8 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 html {
+    padding: 0px;
+    margin: 0%;
+}
+body{
     padding: 0%;
+    margin: 0%;
 }
 h1 {
     font-family: 'Inter', sans-serif;
     font-weight: 800;
+}
+.nav{
+    margin: 0%;
+    padding: 15px;
+    position: fixed;
+}
+.title-header-fill{
+    margin: 0%;
+    padding: 0%;
+    height: 2vh;
+    background-image: url(../img/character_extreme_lighting.png);
+    background-color: black;
+    background-size: 187vh;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    color: white;
 }
