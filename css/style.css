@@ -76,7 +76,7 @@ p {
     font-family: "Inter", sans-serif;
     font-size: 25px;
     color: white;
-    background-image: url(../img/character_extreme_lighting.png);
+    background-image: url(../img/BetterLoadingScreenBySniperdudeAndExtrovert.png);
     margin: 0%;
     padding: 0%;
 }
@@ -91,11 +91,14 @@ footer {
 }
 
 .smallHeader {
-
+ padding: 20px;
+ font-size: 30px;
+ font-weight: 400;
 }
 
 .description {
-    font-size: 15px;
+    font-size: 18px;
+    font-weight: 300;
 }
 
 /* Anims */
