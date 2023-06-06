@@ -1,187 +1,55 @@
-/* Import Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');/* Start */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 html {
-    padding: 0px;
-    margin: 0%;
-}
-
-body{
-    padding: 0%;
-    margin: 0%;
-    background-color: black;
-}
-
-h1 {
+    background-color: rgb(37, 37, 37);
+    color: white;
     font-family: 'Inter', sans-serif;
-    font-weight: 800;
-}
-
-p {
-    padding: 10px;
-    margin: 0%;
-}
-
-.nav{
-    margin: 0%;
-    padding: 15px;
-    position: fixed;
-    width: 100%;
-}
-
-.title-header-fill{
-    margin: 0%;
     padding: 0%;
-    background-image: url(../img/Background.png);
-    background-color: black;
-    background-size: 187vh;
-    height: 100vh;
+    margin: 0%;
+}
+
+body {
+    padding: 0%;
+    margin: 0%;
+}
+
+.banner {
+    height: 100Vh;
+    display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    display: flex;
     flex-direction: column;
-    color: white;
-    font-family: "Inter", sans-serif;
-    font-weight: 300px;
-    font-size: 22.5px;
+    background-image: url("D:/Project/Saved/Screenshots/WindowsEditor/HighresScreenshot00008.png");
+    background-size: cover;
 }
 
-.newsBar {
-    padding: 10px;
-    color: white;
-    font-family: "Inter", sans-serif;
-    text-align: center;
-}
-
-.mainContent {
+nav {
+    background-color: #333;
+    overflow: hidden;
+    position: fixed;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    float: left;
+  }
+  
+  nav li a {
     display: block;
-    padding: 0%;
-    margin: 0%;
-}
-
-.newBarContent {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-}
-
-.newsBarTextContent {
-    width: 500px;
-}
-
-.introductionSection {
-    width: 100%;
-    text-align: center;
-    font-family: "Inter", sans-serif;
-    font-size: 25px;
-    color: white;
-    background-image: url(../img/BetterLoadingScreenBySniperdudeAndExtrovert.png);
-    margin: 0%;
-    padding: 0%;
-}
-
-
-footer {
-    font-family: "Inter", sans-serif;
     color: white;
     text-align: center;
-    padding: 10px;
-    font-weight: 300;
-}
-
-.smallHeader {
- padding: 30px;
- font-size: 30px;
- font-weight: 400;
-}
-
-.description {
-    font-size: 18px;
-    font-weight: 300;
-}
-
-/* Anims */
-/* Main Site On-load */
-@keyframes mainLogoAnim {
-    0% {rotate: -90deg; opacity: 0%; scale: 50%;}
-    50% {rotate: 0deg; opacity: 100%; scale: 100%;}
-    55% {opacity: 100%;}
-    60% {scale: 100%; opacity: 100%; transform: translateY(0px);}
-    100% {scale: 55%; opacity: 100%; transform: translateY(-100px);}
-}
-
-.mainLogo {
-    opacity: 0%;
-    animation-name: mainLogoAnim;
-    animation-duration: 2.5s;
-    animation-delay: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-.mainHeaderText::before {
-    content: "Introducing, Battlelux.";
-    transform: translateY(-110px);
-    opacity: 0%;
-    animation-name: mainHeaderTextFade;
-    animation-duration: 4s;
-    animation-delay: 3s;
-    animation-fill-mode: forwards;
-}
-@keyframes mainHeaderTextFade {
-    0% {opacity: 0%; content: "Introducing, Battlelux."; transform: translateY(-20px);}
-    25% {opacity: 100%; content: "Introducing, Battlelux."; transform: translateY(0px);}
-    50% {opacity: 0; content: "Introducing, Battlelux."}
-    55% {content: "The Realistic Third Person Shooter"}
-    100% {opacity: 100%; content: "The Realistic Third Person Shooter"}
-}
-
-.mainHeaderText {
-    transform: translateY(-110px);
-}
-
-@keyframes mainNavAnim {
-    0% {transform: translateY(-25%); opacity: 0%;}
-    100% {transform: translateY(0%); opacity: 100%;}
-}
-
-.nav {
-    transform: translateY(-100%);
-    animation-name: mainNavAnim;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes mainFadeBackground {
-    0% {opacity: 0%;}
-    20% {}
-    100% {opacity: 100%;}
-}
-
-.content {
-    animation-name: mainFadeBackground;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    padding: 0%;
-    margin: 0%;
-}
-
-/* Custom Scrollbar */
-/* width */
-::-webkit-scrollbar {
-    width: 7px;
+    padding: 14px 16px;
+    text-decoration: none;
   }
   
-  /* Track */
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px rgb(255, 255, 255);
-    border-radius: 5px;
+  nav li a:hover {
+    background-color: #111;
   }
   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: rgb(150, 150, 150);
-    border-radius: 10px;
+  footer {
+    text-align: center;
   }
-
-/* idk */
