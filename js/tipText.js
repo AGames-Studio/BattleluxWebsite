@@ -1,12 +1,13 @@
 // (C)20223 AGames Studio
 
-function changeTipText() {
-    console.log("chec");
-}
-
-window.onload = function() {
+function tipTextLoad() {
+    var a = 0;
+    var tips = [];
     var tipText = document.getElementById("TipText");
     console.log("Yay it works!");
-    setInterval( changeTipText, 1000); 
+    setInterval( function changeTipText() {
+        console.log("chec");
+        tipText.textContent="Interval="+a;
+        a++
+    }, 1000); 
 }
-
