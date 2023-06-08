@@ -1,19 +1,29 @@
 // (C)2023 AGames Studio
 
 window.onload = function() {
-    console.log("main.js Loaded!");
     var banner = document.getElementById("banner");
     var a = 0;
     var imgs = ["img0", "img1", "img2", "img3", "img4", "img5", "img6", "img7", "img8", "img9"];
     tipTextLoad();
     setInterval( () => {
-        if (a >= 10) {
+        if (a >= imgs.length) {
             a = 0;
-            console.log(imgs[a]);
+            // Set background image
             a++;
         } else {
-            console.log(imgs[a]);
+            // Set background image
             a++;
         }
-    }, 500);
+    }, 1000);
+}
+
+window.onscroll = () => {
+    var navbar = document.querySelector('nav')
+    if (window.scrollY >= 25) {
+        navbar.style.backgroundColor="rgba(0,0,0,0.35)"
+        navbar.style.backdropFilter="blur(5px)"
+    }else {
+        navbar.style.backgroundColor="rgba(0,0,0,0)"
+        navbar.style.backdropFilter="blur(0px)"
+    }
 }
