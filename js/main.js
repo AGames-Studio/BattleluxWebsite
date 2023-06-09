@@ -3,7 +3,7 @@
 window.onload = () => {
     var banner = document.getElementById("banner");
     var a = 0;
-    var baseImgs = ["../img/HighresScreenshot00009.png","../img/image.png","../img/image3.png"];
+    var baseImgs = ["../img/HighresScreenshot00009.png","../img/image.png","../img/image3.png", "../img/iSwearThatItsNotTheSameImage.png", "../img/HighresScreenshot00006.png", "../img/HighresScreenshot00012.png"];
     var imgs = shuffle(baseImgs);
     banner.style.backgroundImage="url("+imgs[a]+")";
     a++;

@@ -169,7 +169,7 @@ footer {
 
 .section1::before {
   content: "";
-  background-image: url('../img/HighresScreenshot00001.png');
+  background-image: url('../img/image6.png');
   background-color: rgba(0, 0, 0, 0.45);
   filter: blur(2px);
   background-blend-mode: multiply;
@@ -210,40 +210,86 @@ footer {
 }
 
 .section3 {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding-top: 10px;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-image: url('../img/HighresScreenshot00001.png');
-  background-size: cover;
   height: 400px;
+  z-index: 0;
+}
+
+.section3::before {
+  content: "";
+  background-image: url('../img/HighresScreenshot00001.png');
+  background-color: rgba(0, 0, 0, 0.45);
+  filter: blur(2px);
+  background-blend-mode: multiply;
+  background-size: cover;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  z-index: -1;
 }
 
 .section4 {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding-top: 10px;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-image: url('../img/HighresScreenshot00001.png');
-  background-size: cover;
   height: 400px;
+  z-index: 0;
+}
+
+.section4::before {
+  content: "";
+  background-image: url('../img/image5.png');
+  background-color: rgba(0, 0, 0, 0.45);
+  filter: blur(2px);
+  background-blend-mode: multiply;
+  background-size: cover;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  z-index: -1;
 }
 
 .section5 {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding-top: 10px;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-image: url('../img/HighresScreenshot00001.png');
-  background-size: cover;
   height: 400px;
+  z-index: 0;
 }
+
+.section5::before {
+  content: "";
+  background-image: url('../img/image4.png');
+  background-color: rgba(0, 0, 0, 0.45);
+  filter: blur(2px);
+  background-blend-mode: multiply;
+  background-size: cover;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  z-index: -1;
+}
+
 
 .sectionComingSoon {
   position: relative;
