@@ -5,6 +5,7 @@ html {
   font-family: 'Inter', sans-serif;
   padding: 0%;
   margin: 0%;
+  overflow-x: hidden;
 }
 
 body {
@@ -13,6 +14,7 @@ body {
 }
 
 .banner {
+  position: relative;
   height: 100Vh;
   display: flex;
   justify-content: center;
@@ -23,6 +25,7 @@ body {
   background-color: rgba(0, 0, 0, .2);
   background-blend-mode: multiply;
   transition: all 1s;
+  z-index: 2;
 }
 
 nav {
@@ -32,7 +35,7 @@ nav {
   display: flex;
   flex: auto;
   padding: 0;
-  margin: 0;
+  margin: 0%;
   z-index: 100;
   background-color: rgba(0, 0, 0, 0);
   position:fixed;
@@ -42,6 +45,7 @@ nav {
 nav ul {
   margin: 0%;
   padding: 0%;
+  flex-grow: 1;
 }
 
 .navLogo {
@@ -49,34 +53,42 @@ nav ul {
   flex: auto;
   z-index: 0;
   float: left;
-  padding: 7px;
+  height: 19.5px;
+  width: 19.5px;
+  padding-top: 20px;
+  padding-left: 20px;
 }
 
 nav li {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px 16px;
   width: max-content;
   height: 100%;
-
+  display: flex;
+  flex-grow: 1;
 }
 
-nav li a {
+.navItemText {
   display: flex;
-  flex-wrap: wrap;
   color: white;
   text-align: center;
   text-decoration: none;
-  text-align: center;
   align-content: center;
   justify-content: center;
   height: 100%;
-  width: max-content;
+  width: 100%;
+  flex-grow: 1;
+  padding: 20px 16px;
 }
 
-nav li a:hover {
-  background-color: #111;
+.navItem {
+  transition: all 0.25s;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.navItem:hover {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 footer {
@@ -117,5 +129,144 @@ h1 {
 }
 
 .tipText {
+  padding: 0%;
   padding-left: 10px;
+  user-select: none;
+  font-size: 17px;
+}
+
+footer {
+  padding: 10px;
+}
+
+/* Custom Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(255, 255, 255);
+  border-radius: 5px;
+}
+
+.section1 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 400px;
+  z-index: 1;
+}
+
+.section1::before {
+  content: "";
+  background-image: url('../img/HighresScreenshot00001.png');
+  background-color: rgba(0, 0, 0, 0.45);
+  filter: blur(2px);
+  background-blend-mode: multiply;
+  background-size: cover;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  z-index: -1;
+}
+
+.section2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 400px;
+  z-index: 0;
+}
+
+.section2::before {
+  content: "";
+  background-image: url('../img/HighresScreenshot00010.png');
+  background-color: rgba(0, 0, 0, 0.45);
+  filter: blur(2px);
+  background-blend-mode: multiply;
+  background-size: cover;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  z-index: -1;
+}
+
+.section3 {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url('../img/HighresScreenshot00001.png');
+  background-size: cover;
+  height: 400px;
+}
+
+.section4 {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url('../img/HighresScreenshot00001.png');
+  background-size: cover;
+  height: 400px;
+}
+
+.section5 {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url('../img/HighresScreenshot00001.png');
+  background-size: cover;
+  height: 400px;
+}
+
+.sectionComingSoon {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url('../img/image2.png');
+  background-size: cover;
+  height: 200px;
+}
+
+.sectionText{
+  width: 50vw;
+}
+
+h2 {
+  font-size: 27px;
+}
+
+p {
+  font-size: 18px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(150, 150, 150);
+  border-radius: 10px;
 }
