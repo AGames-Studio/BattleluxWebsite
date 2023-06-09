@@ -1,84 +1,121 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 html {
-    background-color: rgb(37, 37, 37);
-    color: white;
-    font-family: 'Inter', sans-serif;
-    padding: 0%;
-    margin: 0%;
+  background-color: rgb(37, 37, 37);
+  color: white;
+  font-family: 'Inter', sans-serif;
+  padding: 0%;
+  margin: 0%;
 }
 
 body {
-    padding: 0%;
-    margin: 0%;
+  padding: 0%;
+  margin: 0%;
 }
 
 .banner {
-    height: 100Vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-size: cover;
-    background-image: url('../img/HighresScreenshot00009.png');
+  height: 100Vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  background-image: url('../img/HighresScreenshot00009.png');
+  background-color: rgba(0, 0, 0, .2);
+  background-blend-mode: multiply;
+  transition: all 1s;
 }
 
 nav {
-    background-color: rgba(0,0,0,0);
-    overflow: hidden;
-    position: fixed;
-    width: 100vw;
-    padding: 5px, 5px, 5px, 5px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    transition: all 0.35S;
+  top: 0;
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex: auto;
+  padding: 0;
+  margin: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0);
+  position:fixed;
+  transition: all 0.25s;
 }
   
-  nav ul {
-    list-style-type: none;
-    margin: 5px;
-    padding: 0;
-  }
-  
-  nav li {
-    float: left;
-    }
-  
-  nav li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  nav li a:hover {
-    background-color: #111;
-  }
-  
-  footer {
-    text-align: center;
-    background-color: #111;
-  }
+nav ul {
+  margin: 0%;
+  padding: 0%;
+}
 
-  nav ul {
-    height: 100%;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-  }
+.navLogo {
+  display: flex;
+  flex: auto;
+  z-index: 0;
+  float: left;
+  padding: 7px;
+}
 
-  nav ul .navItem {
-    display: flex;
-    float: right;
-    align-items: center;
-    justify-content: center;
-    padding: 17px;
-  }
+nav li {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px 16px;
+  width: max-content;
+  height: 100%;
 
-  .navLogoImg {
-      padding: 0%;
-      margin: 0%;
-      height: 50px;
-      width: 50px;
-  }
+}
+
+nav li a {
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  height: 100%;
+  width: max-content;
+}
+
+nav li a:hover {
+  background-color: #111;
+}
+
+footer {
+  text-align: center;
+  background-color: #111;
+}
+
+nav ul {
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul .navItem {
+  display: flex;
+  float: right;
+  align-items: center;
+  justify-content: center;
+}
+
+.navLogoImg {
+  padding: 0%;
+  margin: 0%;
+  height: 45px;
+  width: 45px;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+h1 {
+  margin: auto;
+}
+
+.tipText {
+  padding-left: 10px;
+}

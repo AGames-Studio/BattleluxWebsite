@@ -3,7 +3,7 @@
 function tipTextLoad() {
     var a = 0;
     var tips = ["Welcome to the Offical Battlelux Website!", "Did you know that you can buy lux directly on the website?", "@Ye was here", "Battlelux Alpha Testing coming soon!", "Yo sup Mr. Warrior", "AI rules!", "Battlelux coming soon!", "Winter 2023."] ;
-    var tipText = document.getElementById("TipText");
+    var tipText = document.getElementById("tipText");
     // There is a better solution for this but... yea this works for now.
     tipText.textContent=tips[a];
     a++;
