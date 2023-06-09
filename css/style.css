@@ -6,6 +6,7 @@ html {
   padding: 0%;
   margin: 0%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -24,7 +25,7 @@ body {
   background-image: url('../img/HighresScreenshot00009.png');
   background-color: rgba(0, 0, 0, .2);
   background-blend-mode: multiply;
-  transition: all 1s;
+  transition: background-color 1.5s;
   z-index: 2;
 }
 
@@ -39,7 +40,7 @@ nav {
   z-index: 100;
   background-color: rgba(0, 0, 0, 0);
   position:fixed;
-  transition: all 0.25s;
+  transition: background-color 0.25s;
 }
   
 nav ul {
@@ -92,8 +93,10 @@ nav li {
 }
 
 footer {
+  position: relative;
   text-align: center;
   background-color: #111;
+  z-index: 5;
 }
 
 nav ul {
@@ -137,6 +140,7 @@ h1 {
 
 footer {
   padding: 10px;
+  font-size: 15px;
 }
 
 /* Custom Scrollbar */
@@ -242,16 +246,32 @@ footer {
 }
 
 .sectionComingSoon {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding-top: 10px;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-image: url('../img/image2.png');
-  background-size: cover;
-  height: 200px;
+  height: 90vh;
+  z-index: 0;
 }
+
+.sectionComingSoon::before {
+  content: "";
+  background-image: url('../img/image2.png');
+  background-color: rgba(0, 0, 0, 0.45);
+  filter: blur(2px);
+  background-blend-mode: multiply;
+  background-size: cover;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  z-index: -1;
+}
+
 
 .sectionText{
   width: 50vw;
@@ -269,4 +289,22 @@ p {
 ::-webkit-scrollbar-thumb {
   background: rgb(150, 150, 150);
   border-radius: 10px;
+}
+
+table {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.25s;
+}
+
+table:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 40px;
+}
+
+th, td {
+  padding: 10px;
 }
