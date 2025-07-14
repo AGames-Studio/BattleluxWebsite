@@ -39,15 +39,18 @@ button{
     border: 2px solid rgb(255, 255, 255);
     color: white;
     font-size: 18px;
-    background: rgba(255, 255, 255, 0.377) url('https://c.tenor.com/fuGIGEckxdMAAAAd/tenor.gif') no-repeat center center;
+    background: url('https://c.tenor.com/fuGIGEckxdMAAAAd/tenor.gif');
     background-size: cover;
-    
+    background-position: center;
+    background-repeat: no-repeat;
+
     transition: all .2s ease-in-out;
 }
 
 button:hover{
     cursor: pointer;
     background: url('https://c.tenor.com/cDl7v8avyC0AAAAd/tenor.gif') no-repeat center center;
+    background-position: center 55%;
     background-size: cover;
 }
 
