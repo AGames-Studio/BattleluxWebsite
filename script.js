@@ -7,3 +7,28 @@ document.addEventListener('mousemove', (event) => {
     
     document.querySelector('.background').style.transform = `translate(-${moveX}px, -${moveY}px)`;
 });
+
+  (function() {
+    const konamiSequence = [
+      'ArrowUp', 'ArrowUp',
+      'ArrowDown', 'ArrowDown',
+      'ArrowLeft', 'ArrowRight',
+      'ArrowLeft', 'ArrowRight',
+      'b', 'a'
+    ];
+    let konamiPosition = 0;
+
+    window.addEventListener('keydown', function(e) {
+      const key = e.key.toLowerCase();
+
+      if (key === konamiSequence[konamiPosition].toLowerCase()) {
+        konamiPosition++;
+        if (konamiPosition === konamiSequence.length) {
+          
+          window.location.href = 'ඞ'; 
+        }
+      } else {
+        konamiPosition = 0; 
+      }
+    });
+  })();
