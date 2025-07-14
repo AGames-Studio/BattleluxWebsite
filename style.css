@@ -41,6 +41,7 @@ button{
     font-size: 18px;
     background: rgba(255, 255, 255, 0.377) url('https://c.tenor.com/fuGIGEckxdMAAAAd/tenor.gif') no-repeat center center;
     background-size: cover;
+    
     transition: all .2s ease-in-out;
 }
 
