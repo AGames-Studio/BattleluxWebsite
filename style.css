@@ -39,13 +39,13 @@ button{
     border: 2px solid rgb(255, 255, 255);
     color: white;
     font-size: 18px;
-    background: rgba(255, 255, 255, 0.377);
+    background: rgba(255, 255, 255, 0.377) url('https://c.tenor.com/fuGIGEckxdMAAAAd/tenor.gif') no-repeat center center;
     transition: all .2s ease-in-out;
 }
 
 button:hover{
     cursor: pointer;
-    background-color: transparent;
+    background: url('https://c.tenor.com/cDl7v8avyC0AAAAd/tenor.gif') no-repeat center center;
 }
 
 h2{
