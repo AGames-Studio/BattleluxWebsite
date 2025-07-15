@@ -1,0 +1,255 @@
+    :root {
+      --primary: #2d4a8a;
+      --highlight: #5d76c6;
+      --light-bg: #f8f9ff;
+      --text: #111;
+      --radius: 16px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--light-bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    nav {
+      background: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      font-size: 18px;
+      z-index: 999;
+    }
+
+    nav img {
+      height: 80px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: var(--primary);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    .mobile-toggle {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        position: absolute;
+        top: 110px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        padding: 20px 0;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+      .nav-links.show {
+        display: flex;
+      }
+      .mobile-toggle {
+        display: block;
+      }
+    }
+
+    header {
+      background: linear-gradient(135deg, #2d4a8a, #5d76c6);
+      color: white;
+      padding: 100px 10vw 60px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3.2rem;
+      margin-bottom: 20px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+
+    section {
+      padding: 80px 10vw;
+    }
+
+    .highlight-box {
+      background: white;
+      border-radius: var(--radius);
+      padding: 40px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      margin-bottom: 60px;
+    }
+
+    section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      font-size: 1.05rem;
+      margin-bottom: 16px;
+    }
+
+    .requirements ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .requirements li {
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .timeline {
+      border-left: 3px solid var(--primary);
+      padding-left: 20px;
+      margin-top: 40px;
+    }
+
+    .timeline-event {
+      margin-bottom: 30px;
+    }
+
+    .timeline-event h3 {
+      font-size: 1.2rem;
+      margin-bottom: 4px;
+      color: var(--primary);
+    }
+
+    .timeline-event p {
+      margin: 0;
+    }
+
+    .review-section {
+      background: #1f2c4c;
+      color: #fff;
+      padding: 80px 10vw;
+      text-align: center;
+    }
+
+    .review-section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+    }
+
+    .review-slider {
+      position: relative;
+      width: 660px;
+      height: 180px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    @media (max-width: 480px) {
+      .review-slider {
+        width: 60vw;
+        height: 250px; /* Höhe passt sich an */
+      }
+    }
+
+    .review-track {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .review-card {
+      position: absolute;
+      top: 0;
+      left: 100vw; /* Start außerhalb rechts (wird im JS überschrieben) */
+      width: 100%;
+      max-width: 660px; /* max Breite Desktop */
+      background: #2d3e63;
+      padding: 30px 20px;
+      margin: 0 auto;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      color: #fff;
+      opacity: 0;
+      transition: left 0.6s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.6s ease;
+      box-sizing: border-box;
+    }
+
+    .review-card.active {
+      left: 0;
+      opacity: 1;
+    }
+
+    .review-card.exit-left {
+      opacity: 0;
+      /* left wird im JS gesetzt */
+    }
+
+    .review-card p {
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
+
+    .review-card span {
+      font-weight: bold;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+      color: #777;
+      background: #f1f1f1;
+    }
+
+    footer img {
+      height: 40px;
+      margin: 10px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+    }

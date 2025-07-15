@@ -1,32 +1,148 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./Battlelux-Blue.png">
-    <title>Battelux | Work in Progress...</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel = "icon" href = "img/Battlelux-Blue.png" type = "image/x-icon">     
+  <title>Battlelux – Home </title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <div class="background"></div>
-    <div class="content">
-        <h1 class="shimmer">WORK IN PROGRESS</h1>
-        <h2>We're working on something special! ඞ</h2>
-        <h2 style="text-align: center; margin: 1em 0 0.5em 0; color: #a603b4;"><u>
-            Check out new UPDATE:
-        </u></h2>
+  <nav>
+    <img src="./img/Battlelux-Blue.png" alt="Battlelux Logo">
+    <div class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">
+      ☰
+    </div>
+    <div class="nav-links">
+      <a href="#" class="active">HOME</a>
+      <a href="team.html">TEAM</a>
+      <a href="about.html">ABOUT</a>
+      <a href="download.html">DOWNLOAD</a>
+    </div>
+  </nav>
 
+  <ul class="slideshow">
+    <li><h3>Welcome to Battlelux!</h3></li>
+    <li><h3>AI rules</h3></li>
+    <li><h3>Download Battlelux now!</h3></li>
+    <li><h3>@Ye was here</h3></li>
+    <li><h3>Battlelux Coming soon...</h3></li>
+    <li><h3>Winter 2023...</h3></li>
+  </ul>
 
-            <img src="https://cdn.discordapp.com/attachments/1023922440914600016/1394110343969509568/a06kb7.png?ex=68759def&is=68744c6f&hm=82ec8e860fa1675ec04b106f12e2600fa39d3a92cbffb68025cf2c070b44e478&" alt="Update" />
+  <section class="section">
+    <img src="./img/Battlelux-Blue.png" alt="Battlelux">
+    <div class="text-container">
+      <h2>ENTER THE <span style="text-decoration: underline; color: var(--highlight);">ALL NEW</span> BATTLEFIELD</h2>
+      <p>Battlelux is a realistic and exciting third-person shooter. Create your own character, choose your playstyle, and dominate the battlefield—whether in Battle Royale or the story campaign.</p>
+      <button onclick="window.location.href='download.html'">Download Now</button>
+    </div>
+  </section>
 
+  <section class="section reverse">
+    <img src="./img/Meetong.png" alt="Team">
+    <div class="text-container">
+      <h2>Our <span style="text-decoration: underline; color: #fff;">SPECIAL</span> Team</h2>
+      <p>A huge thank you to our entire development team and our community. Without your support, Battlelux wouldn't exist. Thank you for being part of this adventure!</p>
+      <button onclick="window.location.href='team.html'">Our Team</button>
+      <button onclick="window.location.href='https://dsc.gg/battlelux'">Community</button>
+    </div>
+  </section>
 
-        <button onclick="window.location.href='https://discord.gg/QfPuW2zPMq'">Our Discord</button>
+  <section class="section">
+    <img src="./img/HighresScreenshot00006.png" alt="Weapons Feature">
+    <div class="text-container">
+      <h2>Endless <span style="text-decoration: underline; color: var(--highlight);">possibilities</span></h2>
+      <p>Whether you prefer close-quarters or ranged combat, customize your weapons, gear, and abilities to suit your style. Our dynamic combat system brings back true skill-based gameplay.</p>
+      <button onclick="window.location.href='download.html'">Jetzt Ausprobieren</button>
+    </div>
+  </section>
+
+  <section class="section reverse">
+    <div class="text-container">
+      <h2>A look at the <span style="text-decoration: underline; color: #fff;">world of Battlelux</span></h2>
+      <p>Experience breathtaking environments, detailed characters and epic battles – a captivating visual experience.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;">
+      <img src="./img/1HighresScreenshot00010 (1).png" alt="Screenshot 1" style="width:100%; border-radius: var(--radius); box-shadow: 0 6px 16px rgba(0,0,0,0.15);">
+      <img src="./img/1HighresScreenshot00010 (2).png" alt="Screenshot 2" style="width:100%; border-radius: var(--radius); box-shadow: 0 6px 16px rgba(0,0,0,0.15);">
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <h2>Frequently asked questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-question">🕒 When will Battlelux be released?</div>
+      <div class="faq-answer">We are currently planning the release for the end of 2025. A playable demo will follow soon!</div>
     </div>
 
-    <footer class="konami-note">Enter Da Konami Code For Backrooms</footer>
-    <script src="script.js"></script>
-</body>
+    <div class="faq-item">
+      <div class="faq-question">🧑‍🤝‍🧑 Will there be multiplayer?</div>
+      <div class="faq-answer">Yes – Battle Royale, team modes and co-op campaign are planned!</div>
+    </div>
 
+    <div class="faq-item">
+      <div class="faq-question">🖥️ On which platforms does Battlelux run?</div>
+      <div class="faq-answer">Windows, Linux & macOS – consoles are under discussion.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">💸 Will the game be free?</div>
+      <div class="faq-answer">Battlelux will be released as a paid game – with optional cosmetics, but no pay2win!</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">📢 Where can I get updates?</div>
+      <div class="faq-answer">On our <a href=\"https://dsc.gg/battlelux\" target=\"_blank\">Discord-Community</a> you can find current information, events and dev logs.</div>
+    </div>
+  </section>
+
+
+
+  <footer>
+    <span>&copy; 2023 - 2025 ΛGames Studio. All rights reserved.</span>
+    <div>
+      <img src="img/Battlelux-Blue.png" alt="Battlelux">
+      <img src="img/Logo.png" alt="Logo">
+    </div>
+  </footer>
+
+
+  <script>
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('.section');
+
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.20
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      sections.forEach(section => {
+        observer.observe(section);
+      });
+    });
+  </script>
+</body>
 </html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel = "icon" href = "img/Battlelux-Blue.png" type = "image/x-icon">    
+  <title>Battlelux – Download</title>
+  <link rel="stylesheet" href="css/download.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <img src="./img/Battlelux-Blue.png" alt="Battlelux Logo">
+    <div class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">
+      ☰
+    </div>
+    <div class="nav-links">
+      <a href="index.html">HOME</a>
+      <a href="team.html">TEAM</a>
+      <a href="about.html">ABOUT</a>
+      <a href="#" class="active">DOWNLOAD</a>
+    </div>
+  </nav>
+<section class="hero">
+  <div class="hero-box">
+    <h1>ENTER THE <span>ALL NEW</span> BATTLEFIELD</h1>
+    <p>
+      Battlelux is a thrilling third-person shooter. Create your hero, master melee or gunplay, and dominate in Battle Royale or story mode. Customize, compete, and conquer.
+    </p>
+    <button onclick="document.getElementById('downloads').scrollIntoView({ behavior: 'smooth' })">
+      Download Now
+    </button>
+  </div>
+</section>
+<section class="download-section" id="downloads">
+  <h2>Choose Your Platform</h2>
+  <div class="platforms">
+    <div class="platform-card" onclick="download('windows')">Download for Windows</div>
+    <div class="platform-card" onclick="download('mac')">Download for macOS</div>
+    <div class="platform-card" onclick="download('linux')">Download for Linux</div>
+  </div>
+</section>
+  <footer>
+    <span>&copy; 2023 - 2025 ΛGames Studio. All rights reserved.</span>
+    <div>
+      <img src="img/Battlelux-Blue.png" alt="Battlelux">
+      <img src="img/Logo.png" alt="Logo">
+    </div>
+  </footer>
+
+<script>
+  function download(platform) {
+    const links = {
+      windows: "downloads/battlelux-windows.zip",
+      mac: "error.html",
+      linux: "error.html"
+    };
+
+    window.location.href = links[platform];
+  }
+</script>
+
+</body>
+</html>
