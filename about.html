@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Battlelux – About</title>
+  <link rel="stylesheet" href="./css/about.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav>
+    <img src="./img/Battlelux-Blue.png" alt="Battlelux Logo">
+    <div class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">☰</div>
+    <div class="nav-links">
+      <a href="index.html">HOME</a>
+      <a href="team.html">TEAM</a>
+      <a href="#" class="active">ABOUT</a>
+      <a href="download.html">DOWNLOAD</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>About Battlelux</h1>
+    <p>Experience the next generation of realistic battles developed by a small international studio with a big vision.</p>
+  </header>
+
+  <section>
+    <div class="highlight-box">
+      <h2>What is Battlelux?</h2>
+      <p><strong>Battlelux</strong> is a tactical third-person shooter with a focus on realism, team play, and creative freedom. Whether you're fighting for survival in the fast-paced Battle Royale or delving deep into the story in the campaign, Battlelux offers excitement, style, and strategic depth.</p>
+      <p>Create your own character, choose your playstyle, and battle against players from all over the world on a variety of impressive maps.</p>
+    </div>
+
+    <div class="highlight-box">
+      <h2>About AGames Studio</h2>
+      <p><strong>AGames Studio</strong> is a small, independent development studio based in the USA with team members, supporters, and creative minds from all over the world. We share a passion for games that are not only technically powerful, but also emotionally engaging and exciting.</p>
+      <p>Our goal is to create memorable experiences. Battlelux is our biggest passion project to date and we are constantly developing it further together with our community.</p>
+    </div>
+
+    <div class="highlight-box requirements">
+      <h2>System requirements</h2>
+      <ul>
+        <li><strong>Operating System:</strong> Windows 10 / macOS 11 / Linux</li>
+        <li><strong>Processor:</strong> Intel Core i3-8100 or AMD Ryzen 3 1200</li>
+        <li><strong>RAM:</strong> 8 GB</li>
+        <li><strong>Graphics:</strong> NVIDIA GeForce GTX 1050 Ti or AMD Radeon RX 570</li>
+        <li><strong>Storage Space:</strong> 10 GB</li>
+        <li><strong>Recommended:</strong> SSD for fast loading times</li>
+      </ul>
+    </div>
+
+    <div class="highlight-box">
+      <h2>Timeline</h2>
+      <div class="timeline">
+        <div class="timeline-event">
+          <h3>2023 – First Concept Phase</h3>
+          <p>Battlelux begins as a passion project for a small development team.</p>
+        </div>
+        <div class="timeline-event">
+          <h3>Spring 2024 – Internal Prototype</h3>
+          <p>The first playable versions are tested internally and in a small group.</p>
+        </div>
+        <div class="timeline-event">
+          <h3>Summer 2024 – Community Alpha</h3>
+          <p>Battlelux becomes playable for early backers feedback flows directly into development.</p>
+        </div>
+        <div class="timeline-event">
+          <h3>2025 – Public Beta & Launch</h3>
+          <p>Official beta version for everyone. The final release is planned for the end of 2025.</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="review-section">
+      <h2>What players say</h2>
+      <div class="review-slider">
+        <div class="review-track" id="reviewTrack">
+          <div class="review-card">
+            <p>“Battlelux feels like a mix of strategy and adrenaline very cool!”</p>
+            <span>– Max, Alpha-Tester</span>
+          </div>
+          <div class="review-card">
+            <p>"Incredibly well thought out for an indie project. I love the atmosphere!"</p>
+            <span>– Julia, Community-Member</span>
+          </div>
+          <div class="review-card">
+            <p>"Tacos?"</p>
+            <span>– Ye, Co-Founder</span>
+          </div>
+          <div class="review-card">
+            <p>"Already better than many big shooters. Keep it up!"</p>
+            <span>– Leon, Beta-Partner</span>
+          </div>
+          <div class="review-card">
+            <p>“Great weapon feel has real potential!”</p>
+            <span>– Nico, Early Supporter</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <footer>
+    <span>&copy; 2023 - 2025 ΛGames Studio. All rights reserved.</span>
+    <div>
+      <img src="img/Battlelux-Blue.png" alt="Battlelux">
+      <img src="img/Logo.png" alt="Logo">
+    </div>
+  </footer>
+
+</body>
+
+<script>
+const cards = document.querySelectorAll('.review-card');
+const slider = document.querySelector('.review-slider');
+let current = 0;
+let isAnimating = false;
+
+function getSlideWidth() {
+  return slider.clientWidth;
+}
+
+function showReview(nextIndex) {
+  if (isAnimating || nextIndex === current) return;
+  isAnimating = true;
+
+  const slideWidth = getSlideWidth();
+
+  const currentCard = cards[current];
+  const nextCard = cards[nextIndex];
+
+  nextCard.classList.add('active');
+  nextCard.style.left = slideWidth + 'px';
+  nextCard.style.opacity = '1';
+
+  setTimeout(() => {
+    currentCard.classList.add('exit-left');
+    currentCard.style.left = -slideWidth + 'px';
+    currentCard.style.opacity = '0';
+
+    nextCard.style.left = '0';
+  }, 50);
+
+  setTimeout(() => {
+    currentCard.classList.remove('active', 'exit-left');
+    currentCard.style.left = slideWidth + 'px';
+    currentCard.style.opacity = '0';
+
+    current = nextIndex;
+    isAnimating = false;
+  }, 650);
+}
+
+function nextReview() {
+  const nextIndex = (current + 1) % cards.length;
+  showReview(nextIndex);
+}
+
+cards.forEach((card, i) => {
+  if (i === 0) {
+    card.classList.add('active');
+    card.style.left = '0';
+    card.style.opacity = '1';
+  } else {
+    card.style.left = getSlideWidth() + 'px';
+    card.style.opacity = '0';
+  }
+});
+
+let sliderInterval = setInterval(nextReview, 4000);
+
+slider.addEventListener('mouseenter', () => clearInterval(sliderInterval));
+slider.addEventListener('mouseleave', () => sliderInterval = setInterval(nextReview, 4000));
+
+window.addEventListener('resize', () => {
+  const slideWidth = getSlideWidth();
+  cards.forEach((card, i) => {
+    if (card.classList.contains('active')) {
+      card.style.left = '0';
+    } else {
+      card.style.left = slideWidth + 'px';
+      card.style.opacity = '0';
+    }
+  });
+});
+
+</script>
+
+</html>
