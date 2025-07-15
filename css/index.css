@@ -114,12 +114,12 @@
       padding: 60px;
     }
 
-    .slideshow li:nth-child(1) { background: url('../img/HighresScreenshot00010.png') center/cover no-repeat; animation-delay: 0s; }
-    .slideshow li:nth-child(2) { background: url('../img/HighresScreenshot00012.png') center/cover no-repeat; animation-delay: 6s; }
-    .slideshow li:nth-child(3) { background: url('../img/HighresScreenshot00001.png') center/cover no-repeat; animation-delay: 12s; }
-    .slideshow li:nth-child(4) { background: url('../img/HighresScreenshot00006.png') center/cover no-repeat; animation-delay: 18s; }
-    .slideshow li:nth-child(5) { background: url('../img/HighresScreenshot00009.png') center/cover no-repeat; animation-delay: 24s; }
-    .slideshow li:nth-child(6) { background: url('../img/image2.png') center/cover no-repeat; animation-delay: 30s; }
+    .slideshow li:nth-child(1) { background: url('../img/HighresScreenshot00010.jpg') center/cover no-repeat; animation-delay: 0s; }
+    .slideshow li:nth-child(2) { background: url('../img/HighresScreenshot00012.jpg') center/cover no-repeat; animation-delay: 6s; }
+    .slideshow li:nth-child(3) { background: url('../img/HighresScreenshot00001.jpg') center/cover no-repeat; animation-delay: 12s; }
+    .slideshow li:nth-child(4) { background: url('../img/HighresScreenshot00006.jpg') center/cover no-repeat; animation-delay: 18s; }
+    .slideshow li:nth-child(5) { background: url('../img/HighresScreenshot00009.jpg') center/cover no-repeat; animation-delay: 24s; }
+    .slideshow li:nth-child(6) { background: url('../img/image2.jpg') center/cover no-repeat; animation-delay: 30s; }
 
     .slideshow h3 {
       font-size: 1.8rem;
