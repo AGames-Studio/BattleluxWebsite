@@ -37,3 +37,4 @@ find . -type f -name '*.html' | while IFS= read -r file; do
 done
 
 echo "${GREEN}All HTML files processed.${RESET}"
+#lol

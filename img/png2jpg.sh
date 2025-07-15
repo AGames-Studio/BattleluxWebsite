@@ -15,3 +15,4 @@ find . -type f -name '*.png' | while IFS= read -r file; do
     echo "Skipping existing $output"
   fi
 done
+#lol

@@ -47,3 +47,5 @@ echo %GREEN%All HTML files processed.%RESET%
 endlocal
 
 pause
+
+::lol
