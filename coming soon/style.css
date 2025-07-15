@@ -1,0 +1,137 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 110%;
+    height: 110%;
+    background-image: url('./image5.png');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    transition: transform 0.1s ease-out;
+}
+
+.content {
+    position: relative;
+    color: white;
+    text-align: center;
+    top: 45%;
+    transform: translateY(-45%);
+    z-index: 1;
+}
+
+button{
+    position: relative;
+    top: -70px;  
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(255, 255, 255);
+    color: white;
+    font-size: 18px;
+    background: url('./chad/saul.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transition: all .2s ease-in-out;
+}
+
+button:hover{
+    cursor: pointer;
+    background: url('./chad/bad.gif') no-repeat center center;
+    background-position: center 55%;
+    background-size: cover;
+}
+
+h2{
+    position: relative;
+    top: -70px;
+    font-size: 25px;
+    font-weight: 200;
+}
+
+h1:hover{
+    cursor: default;
+}
+
+h2:hover{
+    cursor: default;
+}
+
+h1 {
+    font-size: 100px;
+    font-weight: 900;
+}
+
+.shimmer {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.455);
+    background: -webkit-gradient(linear, left top, right top, from(#ffffff), to(#ffffff), color-stop(0.5, #0048ff));
+    -webkit-background-size: 125px 100%;
+    -webkit-background-clip: text;
+    -webkit-animation-name: shimmer;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-color: #ffffff;
+}
+
+footer.konami-note {
+            position: fixed;
+            bottom: 5px;
+            width: 100%;
+            text-align: center;
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.15);
+            pointer-events: none;
+            user-select: none;     
+            font-family: Arial, sans-serif;
+        }
+
+@-moz-keyframes shimmer {
+    0% {
+            background-position: top left;
+    }
+    100% {
+            background-position: top right;
+    }
+}
+
+@-webkit-keyframes shimmer {
+    0% {
+            background-position: top left;
+    }
+    100% {
+            background-position: top right;
+    }
+}
+
+@-o-keyframes shimmer {
+    0% {
+            background-position: top left;
+    }
+    100% {
+            background-position: top right;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+            background-position: top left;
+    }
+    100% {
+            background-position: top right;
+    }
+}
