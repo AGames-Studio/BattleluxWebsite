@@ -7,6 +7,12 @@ CYAN=$(tput setaf 6)
 BOLD=$(tput bold)
 RESET=$(tput sgr0)
 
+
+bash img/png2jpg.sh
+
+
+
+
 find . -type f -name '*.html' | while IFS= read -r file; do
 
   matches=$(grep -nE 'img/[^"]+\.png\b' "$file")
