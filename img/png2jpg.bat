@@ -32,4 +32,3 @@ for /R %%f in (*.png) do (
 )
 
 echo Conversion complete.
-endlocal
