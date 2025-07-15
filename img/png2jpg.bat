@@ -21,12 +21,14 @@ if %errorlevel%==0 (
     del "%IMAGEMAGICK_INSTALLER%"
 )
 
-for %%i in (*png) do (
-    if exist "%%i" (
-        set "output=%%~ni.jpg"
-        magick "%%i" -background white -alpha remove -alpha off "!output!"
-    )
+for /R %%f in (*.png) do (
+    set "filepath=%%f"
+    set "filename=%%~nf"
+    set "folder=%%~dpf"
+    set "output=!folder!!filename!.jpg"
+
+    echo Converting: %%f to !output!
+    magick "%%f" -background white -alpha remove -alpha off "!output!"
 )
 
 echo Conversion complete.
-endlocal
